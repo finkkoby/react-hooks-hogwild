@@ -2,7 +2,7 @@ import React from 'react'
 import Hog from './Hog'
 import HogCard from './HogCard'
 
-function HogList({ hogTiles, filterBy, sorter, onHogClick, targetHog }) {
+function HogList({ hogTiles, filterBy, sorter, onHogClick, targetHog, onHideClick }) {
     
     function sortHogs(array) {
         return array.sort((a, b) => {
@@ -19,7 +19,7 @@ function HogList({ hogTiles, filterBy, sorter, onHogClick, targetHog }) {
     const sorted = sortHogs(hogTiles)
 
 	const jsxHogs = sorted.map(hog => {
-        if(filterBy || hog.greased) return <Hog object={hog} key={hog.name} onHogClick={onHogClick}/>
+        if(filterBy || hog.greased) return <Hog object={hog} key={hog.name} onHogClick={onHogClick} onHideClick={onHideClick}/>
         else return 
     })
 

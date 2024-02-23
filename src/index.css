@@ -192,3 +192,7 @@ button#formSubmit {
   text-wrap: nowrap;
   align-self:flex-end;
 }
+
+div div div .hidden {
+  display: none;
+}

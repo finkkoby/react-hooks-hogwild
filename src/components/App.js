@@ -35,11 +35,15 @@ function App() {
 		setNewHog({name: "", specialty: "", greased: false, weight: 0, "highest medal achieved": "gold",image: ""})
 	}
 
+	function handleHideClick(card) {
+		card.parentNode.style.display += 'none'
+	}
+
 	return (
 		<div className="App">
 			<Nav />
 			<FilterBar sorter={sorter} onSortChange={handleSortChange} filterBy={filterBy} onFilterChange={handleFilterChange}/>
-			<HogList hogTiles={hogTiles} sorter={sorter} filterBy={filterBy} onHogClick={handleHogClick} targetHog={targetHog}/>
+			<HogList hogTiles={hogTiles} sorter={sorter} filterBy={filterBy} onHogClick={handleHogClick} targetHog={targetHog} onHideClick={handleHideClick}/>
 			<AddHog onInputChange={handleInputChange} newHog={newHog} onFormSubmit={handleFormSubmit}/>
 			<div id="footer"></div>
 		</div>
