@@ -150,3 +150,45 @@ ul {
     transform: rotate(360deg);
   }
 }
+.filterBar {
+  margin: 20px;
+}
+
+.bigPiggy {
+  width: 500px;
+}
+
+.bigPiggyCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+div#form {
+  margin-top: 30px;
+  margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#form label {
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
+#form h3 {
+  margin-left: auto;
+}
+
+button#formSubmit {
+  width: min-content;
+  text-wrap: nowrap;
+  align-self:flex-end;
+}
